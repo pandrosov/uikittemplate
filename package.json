@@ -2,7 +2,7 @@
     "name": "uikittemplate",
     "title": "UIkit template for website UI",
     "description": "",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/js/uikit.js",
     "style": "dist/css/uikit.css",
     "sideEffects": [
