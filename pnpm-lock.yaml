@@ -49,6 +49,9 @@ devDependencies:
   grunt-contrib-concat:
     specifier: ^2.1.0
     version: 2.1.0(grunt@1.6.1)
+  grunt-contrib-copy:
+    specifier: ^1.0.0
+    version: 1.0.0
   grunt-contrib-imagemin:
     specifier: ^4.0.0
     version: 4.0.0
@@ -2555,6 +2558,10 @@ packages:
       flat-cache: 3.0.4
     dev: true
 
+  /file-sync-cmp@0.1.1:
+    resolution: {integrity: sha512-0k45oWBokCqh2MOexeYKpyqmGKG+8mQ2Wd8iawx+uWd/weWJQAZ6SoPybagdCI4xFisag8iAR77WPm4h3pTfxA==}
+    dev: true
+
   /file-type@10.11.0:
     resolution: {integrity: sha512-uzk64HRpUZyTGZtVuvrjP0FYxzQrBf4rojot6J65YMEbwBLB0CWm0CLojVpwpmFmxcE/lkvYICgfcGozbBq6rw==}
     engines: {node: '>=6'}
@@ -3211,6 +3218,14 @@ packages:
       chalk: 4.1.2
       grunt: 1.6.1
       source-map: 0.5.7
+    dev: true
+
+  /grunt-contrib-copy@1.0.0:
+    resolution: {integrity: sha512-gFRFUB0ZbLcjKb67Magz1yOHGBkyU6uL29hiEW1tdQ9gQt72NuMKIy/kS6dsCbV0cZ0maNCb0s6y+uT1FKU7jA==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      chalk: 1.1.3
+      file-sync-cmp: 0.1.1
     dev: true
 
   /grunt-contrib-imagemin@4.0.0:
