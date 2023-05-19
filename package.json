@@ -20,9 +20,8 @@
         "prefix": "node build/prefix",
         "scope": "node build/scope",
         "release": "node build/release",
-        "imports": "grunt less_imports:custom",
-        "new": "grunt less_imports:custom && node build/less",
         "watch-dev": "grunt js && grunt imports && grunt images && grunt watch",
+        "copy-theme": "grunt copy-theme",
         "watch": "watch-run -i -p \"**/*.less\" -- node build/less",
         "eslint-fix": "eslint --fix src/js"
     },
@@ -52,6 +51,7 @@
         "grunt": "^1.6.1",
         "grunt-contrib-clean": "^2.0.1",
         "grunt-contrib-concat": "^2.1.0",
+        "grunt-contrib-copy": "^1.0.0",
         "grunt-contrib-imagemin": "^4.0.0",
         "grunt-contrib-less": "^3.0.0",
         "grunt-contrib-uglify": "^5.2.2",

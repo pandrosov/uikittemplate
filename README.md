@@ -27,5 +27,6 @@ Install:
 1. git clone https://github.com/pandrosov/uikittemplate
 2. install pnpm and run pnpm watch
 3. run pnpm watch-dev
+4. run pnpm copy-theme to copy dist folder to ../ directory
 
 Enjoy!

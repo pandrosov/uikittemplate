@@ -18,6 +18,10 @@ module.exports = function (grunt) {
             imagemin: {
                 files: 'components/images/**/*.{png,jpg}',
                 tasks: ['images']
+            },
+            copy_theme: {
+                files: './dist/**/*',
+                tasks: ['copy_theme']
             }
         },
         less_imports: {
@@ -58,6 +62,7 @@ module.exports = function (grunt) {
         clean: {
             images: ['dist/images/'],
             less: ['custom/import_components.less'],
+            compiled: ['../dist']
         },
         webp: {
             files: {
@@ -89,6 +94,14 @@ module.exports = function (grunt) {
                 noAlpha: false,
                 lossless: false
             }
+        },
+        copy: {
+            files: {
+                expand: true,
+                dest: '../dist',
+                cwd: 'dist/',
+                src: '**'
+            }
         }
     })
 
@@ -101,10 +114,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // register task
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('imports', ['clean:less','less_imports']);
+    grunt.registerTask('imports', ['clean:less', 'less_imports']);
+    grunt.registerTask('copy_theme', ['clean:compiled', 'copy']);
     grunt.registerTask('images', ['clean:images', 'imagemin', 'webp']);
     grunt.registerTask('js', ['concat', 'uglify']);
 
